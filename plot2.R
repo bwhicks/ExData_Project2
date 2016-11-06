@@ -6,7 +6,7 @@ SCC <- readRDS("Source_Classification_Code.rds")
 # Subset readings for Baltimore City
 Baltimore <- subset(NEI, fips == "24510")
 
-# Perform a role-up of Baltimore City data by year for Emissions
+# Perform a roll-up of Baltimore City data by year for Emissions
 agg_Baltimore <- aggregate(Emissions~year, sum, data=Baltimore)
 
 
