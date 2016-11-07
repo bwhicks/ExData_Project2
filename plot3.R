@@ -24,7 +24,7 @@ colnames(aggregate_df) <- names
 
 melted <- melt(aggregate_df, id.vars='Year')
 
-png(filename = 'plot3.png', width=960, height=480)
+dev.copy(png, filename = 'plot3.png', width=960, height=480)
 ggplot(melted,
   aes(x=Year, y=value, color=variable)) +
   labs(title = "Baltimore City PM2.5 from all sources, 1999-2008",

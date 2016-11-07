@@ -11,7 +11,7 @@ agg_Baltimore <- aggregate(Emissions~year, sum, data=Baltimore)
 
 
 #Open the PNG device
-png(filename='plot2.png', width=960, height=480)
+dev.copy(png, filename='plot2.png', width=960, height=480)
 # Build the base plot and labels, disable x-axis, add lines to show irregular
 # drop.
 plot(agg_Baltimore$year, agg_Baltimore$Emissions, xaxt='n',

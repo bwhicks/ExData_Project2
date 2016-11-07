@@ -8,7 +8,7 @@ aggregated_data <- aggregate(Emissions~year, sum, data=NEI)
 aggregated_data$Emissions <- as.numeric(lapply(aggregated_data$Emissions, 
                                     function(x) {x/1000000}))
 #Open the PNG device
-png(filename='plot1.png', width=960, height=480)
+dev.copy(png, filename='plot1.png', width=960, height=480)
 
 # Build the base plot and labels, disable x-axis
 plot(aggregated_data$year, aggregated_data$Emissions, xaxt='n',
